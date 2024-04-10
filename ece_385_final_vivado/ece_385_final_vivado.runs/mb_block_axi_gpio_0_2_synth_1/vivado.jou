@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Apr  1 15:34:56 2024
+# Process ID: 47476
+# Current directory: C:/Users/dasan/OneDrive/Documents/UIUC/2024 Spring/ECE 385/lab6_report/lab6_report.runs/mb_block_axi_gpio_0_2_synth_1
+# Command line: vivado.exe -log mb_block_axi_gpio_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_block_axi_gpio_0_2.tcl
+# Log file: C:/Users/dasan/OneDrive/Documents/UIUC/2024 Spring/ECE 385/lab6_report/lab6_report.runs/mb_block_axi_gpio_0_2_synth_1/mb_block_axi_gpio_0_2.vds
+# Journal file: C:/Users/dasan/OneDrive/Documents/UIUC/2024 Spring/ECE 385/lab6_report/lab6_report.runs/mb_block_axi_gpio_0_2_synth_1\vivado.jou
+# Running On: aniket_gram, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 12, Host memory: 16880 MB
+#-----------------------------------------------------------
+source mb_block_axi_gpio_0_2.tcl -notrace

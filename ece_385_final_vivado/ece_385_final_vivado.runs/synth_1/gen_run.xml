@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1712006141">
+  <File Type="PA-TCL" Name="mb_usb_hdmi_top.tcl"/>
+  <File Type="REPORTS-TCL" Name="mb_usb_hdmi_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="mb_usb_hdmi_top.vds"/>
+  <File Type="RDS-UTIL" Name="mb_usb_hdmi_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mb_usb_hdmi_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="mb_usb_hdmi_top.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/mb_block/mb_block.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Desktop/lab6_report/lab6_report.srcs/sources_1/bd/mb_block/mb_block.bd"/>
+        <Attr Name="ImportTime" Val="1712712251"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab_6_2_akdas3_asmitap2/Color_Mapper.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/Color_Mapper.sv"/>
+        <Attr Name="ImportTime" Val="1710981826"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab_6_2_akdas3_asmitap2/VGA_controller.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/VGA_controller.sv"/>
+        <Attr Name="ImportTime" Val="1710981826"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab_6_2_akdas3_asmitap2/ball.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/ball.sv"/>
+        <Attr Name="ImportTime" Val="1711061754"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab_6_2_akdas3_asmitap2/hex_driver.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/hex_driver.sv"/>
+        <Attr Name="ImportTime" Val="1710981826"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab_6_2_akdas3_asmitap2/mb_usb_hdmi_top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/mb_usb_hdmi_top.sv"/>
+        <Attr Name="ImportTime" Val="1711054644"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab_6_2_akdas3_asmitap2/platform_config.h">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/platform_config.h"/>
+        <Attr Name="ImportTime" Val="1710988918"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab_6_2_akdas3_asmitap2/platform.h">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/platform.h"/>
+        <Attr Name="ImportTime" Val="1665757560"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/mb_block_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Desktop/lab6_report/lab6_report.gen/sources_1/bd/mb_block/hdl/mb_block_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1712006138"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="mb_usb_hdmi_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/lab6_2_provided_XDC/pin_assignment/mb_usb_hdmi_top.xdc"/>
+        <Attr Name="ImportTime" Val="1711692859"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_dlmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_uartlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_rst_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_quad_spi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_3"/>
+</GenRun>
