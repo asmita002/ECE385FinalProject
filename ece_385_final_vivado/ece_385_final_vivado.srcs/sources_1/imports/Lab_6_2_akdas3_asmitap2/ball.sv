@@ -36,46 +36,78 @@ module  ball
     parameter [9:0] Ball_Y_Max=479;     // Bottommost point on the Y axis
     parameter [9:0] Ball_X_Step=1;      // Step size on the X axis
     parameter [9:0] Ball_Y_Step=1;      // Step size on the Y axis
+    
+    parameter grav=1;      // Step size on the Y axis
 
     logic [9:0] Ball_X_Motion;
     logic [9:0] Ball_X_Motion_next;
     logic [9:0] Ball_Y_Motion;
     logic [9:0] Ball_Y_Motion_next;
+    logic gnd_flag;
 
     logic [9:0] Ball_X_next;
     logic [9:0] Ball_Y_next;
+    
+    typedef enum logic {GND, AIR} state_t;
 
+    state_t state;
+    state_t state_next;
+        
     always_comb begin
-        Ball_Y_Motion_next = Ball_Y_Motion; // set default motion to be same as prev clock cycle 
-        Ball_X_Motion_next = Ball_X_Motion;
+        gnd_flag = 0;
+        if (state == AIR)
+        begin
+            Ball_Y_Motion_next = Ball_Y_Motion + grav;                     
+        end
+        else
+        begin
+            Ball_Y_Motion_next = 0;         
+        end
+        Ball_X_Motion_next = 0;
 
         //modify to control ball motion with the keycode
+//        if (keycode == 8'h1A) // keycode for W
+//        begin
+//            Ball_Y_Motion_next = -10'd1;
+//            Ball_X_Motion_next = 10'd0;
+//            end
         if (keycode == 8'h1A) // keycode for W
         begin
-            Ball_Y_Motion_next = -10'd1;
-            Ball_X_Motion_next = 10'd0;
+            if (state == GND)
+            begin
+                Ball_Y_Motion_next = -10'd10;
+                state_next = AIR;
             end
+//            Ball_X_Motion_next = 10'd0;
+        end
         
         if (keycode == 8'h04) // keycode for A
         begin
-            Ball_Y_Motion_next = 10'd0;
+//            Ball_Y_Motion_next = 10'd0;
             Ball_X_Motion_next = -10'd1;
-            end
+        end
         if (keycode == 8'h16) // keycode for S
         begin
             Ball_Y_Motion_next = 10'd1;
-            Ball_X_Motion_next = 10'd0;
-            end
+//            Ball_X_Motion_next = 10'd0;
+        end
         if (keycode == 8'h07) // keycode for D
         begin
-            Ball_Y_Motion_next = 10'd0;
+//            Ball_Y_Motion_next = 10'd0;
             Ball_X_Motion_next = 10'd1;
             end
 
 
-        if ( (BallY + BallS) >= Ball_Y_Max )  // Ball is at the bottom edge, BOUNCE!
+        if ( (BallY + BallS) >= Ball_Y_Max )  // Ball is at the bottom edge, STAY!
         begin
-            Ball_Y_Motion_next = (~ (Ball_Y_Step) + 1'b1);  // set to -1 via 2's complement.
+//            BallY = Ball_Y_Max-BallS;
+//            Ball_Y_Motion_next = (~ (Ball_Y_Step) + 1'b1);  // set to -1 via 2's complement.
+            if (state == AIR)
+            begin
+                gnd_flag = 1;
+                Ball_Y_Motion_next = 0;
+            end
+            state_next = GND;
         end
         else if ( (BallY - BallS) <= Ball_Y_Min )  // Ball is at the top edge, BOUNCE!
         begin
@@ -107,15 +139,25 @@ module  ball
             
 			BallY <= Ball_Y_Center;
 			BallX <= Ball_X_Center;
+			state <= AIR;
+//			gnd_flag <= 0;
         end
         else 
         begin 
 
 			Ball_Y_Motion <= Ball_Y_Motion_next; 
 			Ball_X_Motion <= Ball_X_Motion_next; 
-
-            BallY <= Ball_Y_next;  // Update ball position
+            if (gnd_flag)
+            begin
+                BallY <= Ball_Y_Max-BallS;
+//                gnd_flg <= 0;
+            end
+            else
+            begin
+                BallY <= Ball_Y_next;  // Update ball position
+            end
             BallX <= Ball_X_next;
+            state <= state_next;
 			
 		end  
     end

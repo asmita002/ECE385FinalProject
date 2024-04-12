@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/dasan/OneDrive/Desktop/lab6_report/lab6_report.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc rfile:../../../lab6_report.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc rfile:../../../ece_385_final_vivado.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N15 [get_ports Clk]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
