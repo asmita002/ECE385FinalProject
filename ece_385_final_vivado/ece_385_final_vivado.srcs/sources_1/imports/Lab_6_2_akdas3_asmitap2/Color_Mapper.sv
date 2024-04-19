@@ -53,7 +53,14 @@ module  color_mapper ( input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size,
             Green = 4'h7;
             Blue = 4'h0;
         end       
-        else begin 
+        else if (DrawY >= 470)
+        begin
+            Red = 4'h0;
+            Green = 4'hf;
+            Blue = 4'h0;
+        end
+        else
+        begin 
             Red = 4'hf - DrawX[9:6]; 
             Green = 4'hf - DrawX[9:6];
             Blue = 4'hf - DrawX[9:6];

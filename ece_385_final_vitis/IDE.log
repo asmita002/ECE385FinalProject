@@ -1,0 +1,1300 @@
+21:40:04 DEBUG : Logs will be stored at 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/IDE.log'.
+21:40:07 INFO  : Platform repository initialization has completed.
+21:40:07 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\temp_xsdb_launch_script.tcl
+21:40:07 INFO  : Registering command handlers for Vitis TCF services
+21:40:11 INFO  : XSCT server has started successfully.
+21:40:11 INFO  : Successfully done setting XSCT server connection channel  
+21:40:11 INFO  : plnx-install-location is set to ''
+21:40:15 INFO  : Successfully done setting workspace for the tool. 
+21:40:15 INFO  : Successfully done query RDI_DATADIR 
+21:41:56 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+21:41:56 INFO  : Result from executing command 'getPlatforms': 
+21:41:56 WARN  : An unexpected exception occurred in the module 'platform project logging'
+21:41:56 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+21:41:58 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+11:33:05 INFO  : Result from executing command 'removePlatformRepo': 
+11:33:21 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+11:34:52 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+11:34:52 INFO  : Result from executing command 'getPlatforms': 
+11:34:52 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+11:35:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:35:28 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+11:35:28 INFO  : 'jtag frequency' command is executed.
+11:35:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+11:35:29 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+11:35:30 INFO  : Context for processor 'microblaze_0' is selected.
+11:35:30 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+11:35:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:35:30 INFO  : Context for processor 'microblaze_0' is selected.
+11:35:30 INFO  : System reset is completed.
+11:35:33 INFO  : 'after 3000' command is executed.
+11:35:33 INFO  : Context for processor 'microblaze_0' is selected.
+11:35:33 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+11:35:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+11:35:33 INFO  : Context for processor 'microblaze_0' is selected.
+11:35:33 INFO  : 'con' command is executed.
+11:35:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:35:33 INFO  : Disconnected from the channel tcfchan#4.
+11:48:45 INFO  : Result from executing command 'removePlatformRepo': 
+11:49:23 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+11:49:23 INFO  : Result from executing command 'getPlatforms': 
+11:49:23 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+11:49:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:49:48 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+11:49:48 INFO  : 'jtag frequency' command is executed.
+11:49:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+11:49:49 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+11:49:50 INFO  : Context for processor 'microblaze_0' is selected.
+11:49:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+11:49:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:49:50 INFO  : Context for processor 'microblaze_0' is selected.
+11:49:50 INFO  : System reset is completed.
+11:49:53 INFO  : 'after 3000' command is executed.
+11:49:53 INFO  : Context for processor 'microblaze_0' is selected.
+11:49:53 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+11:49:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+11:49:53 INFO  : Context for processor 'microblaze_0' is selected.
+11:49:53 INFO  : 'con' command is executed.
+11:49:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:49:53 INFO  : Disconnected from the channel tcfchan#7.
+11:50:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:50:27 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+11:50:27 INFO  : 'jtag frequency' command is executed.
+11:50:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+11:50:29 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+11:50:29 INFO  : Context for processor 'microblaze_0' is selected.
+11:50:29 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+11:50:29 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:50:29 INFO  : Context for processor 'microblaze_0' is selected.
+11:50:29 INFO  : System reset is completed.
+11:50:32 INFO  : 'after 3000' command is executed.
+11:50:32 INFO  : Context for processor 'microblaze_0' is selected.
+11:50:32 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+11:50:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+11:50:32 INFO  : Context for processor 'microblaze_0' is selected.
+11:50:32 INFO  : 'con' command is executed.
+11:50:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:50:32 INFO  : Disconnected from the channel tcfchan#8.
+11:51:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:51:16 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+11:51:16 INFO  : 'jtag frequency' command is executed.
+11:51:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+11:51:18 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+11:51:18 INFO  : Context for processor 'microblaze_0' is selected.
+11:51:18 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+11:51:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:51:18 INFO  : Context for processor 'microblaze_0' is selected.
+11:51:18 INFO  : System reset is completed.
+11:51:21 INFO  : 'after 3000' command is executed.
+11:51:21 INFO  : Context for processor 'microblaze_0' is selected.
+11:51:21 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+11:51:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+11:51:21 INFO  : Context for processor 'microblaze_0' is selected.
+11:51:21 INFO  : 'con' command is executed.
+11:51:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:51:21 INFO  : Disconnected from the channel tcfchan#9.
+16:09:22 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:10:56 INFO  : Result from executing command 'removePlatformRepo': 
+16:11:38 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:11:38 INFO  : Result from executing command 'getPlatforms': 
+16:11:38 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+16:11:47 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:11:47 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+16:11:47 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+16:11:47 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+16:15:23 INFO  : Result from executing command 'removePlatformRepo': 
+16:15:50 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:15:50 INFO  : Result from executing command 'getPlatforms': 
+16:15:51 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+16:16:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:16:07 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+16:16:07 INFO  : 'jtag frequency' command is executed.
+16:16:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:16:09 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:16:09 INFO  : Context for processor 'microblaze_0' is selected.
+16:16:09 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:16:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:16:09 INFO  : Context for processor 'microblaze_0' is selected.
+16:16:09 INFO  : System reset is completed.
+16:16:12 INFO  : 'after 3000' command is executed.
+16:16:12 INFO  : Context for processor 'microblaze_0' is selected.
+16:16:12 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+16:16:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+16:16:12 INFO  : Context for processor 'microblaze_0' is selected.
+16:16:12 INFO  : 'con' command is executed.
+16:16:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:16:12 INFO  : Disconnected from the channel tcfchan#14.
+16:22:52 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+16:23:41 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+16:24:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:24:03 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+16:24:03 INFO  : 'jtag frequency' command is executed.
+16:24:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:24:04 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:24:05 INFO  : Context for processor 'microblaze_0' is selected.
+16:24:05 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:24:05 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:24:05 INFO  : Context for processor 'microblaze_0' is selected.
+16:24:05 INFO  : System reset is completed.
+16:24:08 INFO  : 'after 3000' command is executed.
+16:24:08 INFO  : Context for processor 'microblaze_0' is selected.
+16:24:08 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+16:24:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+16:24:08 INFO  : Context for processor 'microblaze_0' is selected.
+16:24:08 INFO  : 'con' command is executed.
+16:24:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:24:08 INFO  : Disconnected from the channel tcfchan#15.
+16:26:43 INFO  : Result from executing command 'removePlatformRepo': 
+16:27:03 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:27:03 INFO  : Result from executing command 'getPlatforms': 
+16:27:03 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+16:28:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:28:15 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+16:28:15 INFO  : 'jtag frequency' command is executed.
+16:28:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:28:16 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:28:16 INFO  : Context for processor 'microblaze_0' is selected.
+16:28:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:28:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:28:16 INFO  : Context for processor 'microblaze_0' is selected.
+16:28:16 INFO  : System reset is completed.
+16:28:19 INFO  : 'after 3000' command is executed.
+16:28:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:28:20 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+16:28:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+16:28:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:28:20 INFO  : 'con' command is executed.
+16:28:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:28:20 INFO  : Disconnected from the channel tcfchan#18.
+16:39:31 INFO  : Result from executing command 'removePlatformRepo': 
+17:00:34 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+17:01:08 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+17:02:44 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+17:02:44 INFO  : Result from executing command 'getPlatforms': 
+17:02:44 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+17:02:51 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:02:51 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+17:02:51 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+17:02:52 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+17:03:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:03:11 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+17:03:11 INFO  : 'jtag frequency' command is executed.
+17:03:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+17:03:12 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+17:03:12 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+17:03:12 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:03:13 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:13 INFO  : System reset is completed.
+17:03:16 INFO  : 'after 3000' command is executed.
+17:03:16 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:16 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+17:03:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+17:03:16 INFO  : Context for processor 'microblaze_0' is selected.
+17:03:16 INFO  : 'con' command is executed.
+17:03:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:03:16 INFO  : Disconnected from the channel tcfchan#22.
+17:21:54 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+17:21:54 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+17:21:55 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+17:22:00 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+17:30:12 DEBUG : Logs will be stored at 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/IDE.log'.
+17:30:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\temp_xsdb_launch_script.tcl
+17:30:18 INFO  : XSCT server has started successfully.
+17:30:18 INFO  : plnx-install-location is set to ''
+17:30:18 INFO  : Successfully done setting XSCT server connection channel  
+17:30:18 INFO  : Successfully done setting workspace for the tool. 
+17:30:22 INFO  : Platform repository initialization has completed.
+17:30:23 INFO  : Registering command handlers for Vitis TCF services
+17:30:28 INFO  : Successfully done query RDI_DATADIR 
+17:32:18 INFO  : Result from executing command 'removePlatformRepo': 
+17:32:45 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+17:32:45 INFO  : Result from executing command 'getPlatforms': 
+17:32:45 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+17:33:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:33:37 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+17:33:37 INFO  : 'jtag frequency' command is executed.
+17:33:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+17:33:38 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+17:33:38 INFO  : Context for processor 'microblaze_0' is selected.
+17:33:39 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+17:33:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:33:39 INFO  : Context for processor 'microblaze_0' is selected.
+17:33:39 INFO  : System reset is completed.
+17:33:42 INFO  : 'after 3000' command is executed.
+17:33:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:33:42 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+17:33:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+17:33:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:33:42 INFO  : 'con' command is executed.
+17:33:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:33:42 INFO  : Disconnected from the channel tcfchan#3.
+17:45:27 DEBUG : Logs will be stored at 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/IDE.log'.
+17:45:28 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\temp_xsdb_launch_script.tcl
+17:45:31 INFO  : XSCT server has started successfully.
+17:45:31 INFO  : plnx-install-location is set to ''
+17:45:31 INFO  : Successfully done setting XSCT server connection channel  
+17:45:31 INFO  : Successfully done setting workspace for the tool. 
+17:45:33 INFO  : Platform repository initialization has completed.
+17:45:34 INFO  : Registering command handlers for Vitis TCF services
+17:45:34 INFO  : Successfully done query RDI_DATADIR 
+17:46:01 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+17:46:15 INFO  : Result from executing command 'removePlatformRepo': 
+17:47:09 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+17:47:09 INFO  : Result from executing command 'getPlatforms': 
+17:47:09 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+17:47:13 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:47:13 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+17:47:13 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+17:47:13 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+17:49:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:49:08 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+17:49:08 INFO  : 'jtag frequency' command is executed.
+17:49:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+17:49:10 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+17:49:10 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:10 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+17:49:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:49:10 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:10 INFO  : System reset is completed.
+17:49:13 INFO  : 'after 3000' command is executed.
+17:49:13 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:13 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+17:49:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+17:49:13 INFO  : Context for processor 'microblaze_0' is selected.
+17:49:13 INFO  : 'con' command is executed.
+17:49:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:49:13 INFO  : Disconnected from the channel tcfchan#3.
+17:57:21 INFO  : Result from executing command 'removePlatformRepo': 
+17:59:54 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+18:00:14 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+18:00:14 INFO  : Result from executing command 'getPlatforms': 
+18:00:14 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+18:00:20 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+18:00:20 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+18:00:20 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+18:00:20 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+18:00:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:00:34 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+18:00:34 INFO  : 'jtag frequency' command is executed.
+18:00:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+18:00:35 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+18:00:36 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+18:00:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:00:36 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:36 INFO  : System reset is completed.
+18:00:39 INFO  : 'after 3000' command is executed.
+18:00:39 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:39 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+18:00:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+18:00:39 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:39 INFO  : 'con' command is executed.
+18:00:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:00:39 INFO  : Disconnected from the channel tcfchan#6.
+18:02:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:02:14 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+18:02:14 INFO  : 'jtag frequency' command is executed.
+18:02:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+18:02:15 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+18:02:15 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:15 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+18:02:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:02:15 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:16 INFO  : System reset is completed.
+18:02:19 INFO  : 'after 3000' command is executed.
+18:02:19 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:19 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+18:02:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+18:02:19 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:19 INFO  : 'con' command is executed.
+18:02:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:02:19 INFO  : Disconnected from the channel tcfchan#7.
+10:23:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:23:12 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+10:23:12 INFO  : 'jtag frequency' command is executed.
+10:23:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+10:23:14 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+10:23:14 INFO  : Context for processor 'microblaze_0' is selected.
+10:23:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+10:23:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:23:14 INFO  : Context for processor 'microblaze_0' is selected.
+10:23:14 INFO  : System reset is completed.
+10:23:17 INFO  : 'after 3000' command is executed.
+10:23:17 INFO  : Context for processor 'microblaze_0' is selected.
+10:23:17 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+10:23:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+10:23:18 INFO  : Context for processor 'microblaze_0' is selected.
+10:23:18 INFO  : 'con' command is executed.
+10:23:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+10:23:18 INFO  : Disconnected from the channel tcfchan#8.
+19:04:55 DEBUG : Logs will be stored at 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/IDE.log'.
+19:04:57 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\temp_xsdb_launch_script.tcl
+19:05:08 INFO  : XSCT server has started successfully.
+19:05:08 INFO  : Platform repository initialization has completed.
+19:05:09 INFO  : Registering command handlers for Vitis TCF services
+19:05:19 INFO  : plnx-install-location is set to ''
+19:05:19 INFO  : Successfully done setting XSCT server connection channel  
+19:05:19 INFO  : Successfully done query RDI_DATADIR 
+19:05:19 INFO  : Successfully done setting workspace for the tool. 
+19:05:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:05:56 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+19:05:56 INFO  : 'jtag frequency' command is executed.
+19:05:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:05:57 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:05:57 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:58 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:05:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:05:58 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:58 INFO  : System reset is completed.
+19:06:01 INFO  : 'after 3000' command is executed.
+19:06:01 INFO  : Context for processor 'microblaze_0' is selected.
+19:06:01 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+19:06:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+19:06:01 INFO  : Context for processor 'microblaze_0' is selected.
+19:06:01 INFO  : 'con' command is executed.
+19:06:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:06:01 INFO  : Disconnected from the channel tcfchan#1.
+19:15:59 DEBUG : Logs will be stored at 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/IDE.log'.
+19:16:01 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\temp_xsdb_launch_script.tcl
+19:16:07 INFO  : XSCT server has started successfully.
+19:16:07 INFO  : plnx-install-location is set to ''
+19:16:07 INFO  : Successfully done setting XSCT server connection channel  
+19:16:07 INFO  : Successfully done setting workspace for the tool. 
+19:16:09 INFO  : Platform repository initialization has completed.
+19:16:09 INFO  : Registering command handlers for Vitis TCF services
+19:16:10 INFO  : Successfully done query RDI_DATADIR 
+19:17:41 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+19:18:48 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+19:19:21 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+19:19:21 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+19:19:21 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+19:19:22 INFO  : Updating application flags with new BSP settings...
+19:19:22 INFO  : Successfully updated application flags for project Lab_6_2.
+19:19:31 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:19:31 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+19:19:31 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+19:19:31 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+19:19:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:19:38 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+19:19:38 INFO  : 'jtag frequency' command is executed.
+19:19:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:19:40 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:19:40 INFO  : Context for processor 'microblaze_0' is selected.
+19:19:40 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:19:40 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:19:40 INFO  : Context for processor 'microblaze_0' is selected.
+19:19:40 INFO  : System reset is completed.
+19:19:43 INFO  : 'after 3000' command is executed.
+19:19:43 INFO  : Context for processor 'microblaze_0' is selected.
+19:19:43 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+19:19:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+19:19:44 INFO  : Context for processor 'microblaze_0' is selected.
+19:19:44 INFO  : 'con' command is executed.
+19:19:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:19:44 INFO  : Disconnected from the channel tcfchan#2.
+19:33:08 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+19:33:30 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+19:34:00 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+19:34:00 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+19:34:01 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+19:34:08 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:34:08 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+19:34:08 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+19:34:08 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+19:34:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:34:27 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+19:34:27 INFO  : 'jtag frequency' command is executed.
+19:34:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:34:28 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:34:28 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:29 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:34:29 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:34:29 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:29 INFO  : System reset is completed.
+19:34:32 INFO  : 'after 3000' command is executed.
+19:34:32 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:32 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+19:34:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+19:34:32 INFO  : Context for processor 'microblaze_0' is selected.
+19:34:32 INFO  : 'con' command is executed.
+19:34:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:34:32 INFO  : Disconnected from the channel tcfchan#4.
+19:47:05 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+19:47:39 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+19:47:39 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+19:47:39 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+19:47:48 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:47:48 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+19:47:49 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+19:47:49 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+19:48:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:48:07 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+19:48:07 INFO  : 'jtag frequency' command is executed.
+19:48:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:48:09 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:48:09 INFO  : Context for processor 'microblaze_0' is selected.
+19:48:10 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:48:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:48:10 INFO  : Context for processor 'microblaze_0' is selected.
+19:48:10 INFO  : System reset is completed.
+19:48:13 INFO  : 'after 3000' command is executed.
+19:48:13 INFO  : Context for processor 'microblaze_0' is selected.
+19:48:13 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+19:48:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+19:48:13 INFO  : Context for processor 'microblaze_0' is selected.
+19:48:13 INFO  : 'con' command is executed.
+19:48:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:48:13 INFO  : Disconnected from the channel tcfchan#6.
+20:09:27 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+20:10:09 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:10:09 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+20:10:09 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+20:10:21 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:10:21 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+20:10:21 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+20:10:21 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+20:10:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:10:41 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+20:10:41 INFO  : 'jtag frequency' command is executed.
+20:10:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:10:43 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:10:43 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:10:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:10:43 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:43 INFO  : System reset is completed.
+20:10:46 INFO  : 'after 3000' command is executed.
+20:10:46 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:47 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+20:10:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+20:10:47 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:47 INFO  : 'con' command is executed.
+20:10:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:10:47 INFO  : Disconnected from the channel tcfchan#8.
+20:22:37 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+20:23:12 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:23:12 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+20:23:13 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+20:23:29 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:23:29 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+20:23:29 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+20:23:29 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+20:23:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:59 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+20:23:59 INFO  : 'jtag frequency' command is executed.
+20:24:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:24:01 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:24:02 INFO  : Context for processor 'microblaze_0' is selected.
+20:24:02 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:24:02 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:24:02 INFO  : Context for processor 'microblaze_0' is selected.
+20:24:02 INFO  : System reset is completed.
+20:24:05 INFO  : 'after 3000' command is executed.
+20:24:05 INFO  : Context for processor 'microblaze_0' is selected.
+20:24:06 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+20:24:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+20:24:08 INFO  : Context for processor 'microblaze_0' is selected.
+20:24:08 INFO  : 'con' command is executed.
+20:24:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:24:08 INFO  : Disconnected from the channel tcfchan#10.
+20:42:03 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+20:42:59 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:42:59 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+20:42:59 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+20:43:25 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:43:25 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+20:43:25 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+20:43:25 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+20:43:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:43:49 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+20:43:49 INFO  : 'jtag frequency' command is executed.
+20:43:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:43:51 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:43:51 INFO  : Context for processor 'microblaze_0' is selected.
+20:43:52 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:43:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:43:52 INFO  : Context for processor 'microblaze_0' is selected.
+20:43:52 INFO  : System reset is completed.
+20:43:55 INFO  : 'after 3000' command is executed.
+20:43:55 INFO  : Context for processor 'microblaze_0' is selected.
+20:43:55 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+20:43:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+20:44:00 INFO  : Context for processor 'microblaze_0' is selected.
+20:44:00 INFO  : 'con' command is executed.
+20:44:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:44:00 INFO  : Disconnected from the channel tcfchan#12.
+20:55:11 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+20:56:14 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:56:14 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+20:56:14 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+20:56:23 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:56:23 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+20:56:23 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+20:56:23 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+20:56:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:56:53 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+20:56:53 INFO  : 'jtag frequency' command is executed.
+20:56:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:56:59 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:56:59 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:59 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:56:59 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:56:59 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:59 INFO  : System reset is completed.
+20:57:02 INFO  : 'after 3000' command is executed.
+20:57:03 INFO  : Context for processor 'microblaze_0' is selected.
+20:57:04 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+20:57:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+20:57:04 INFO  : Context for processor 'microblaze_0' is selected.
+20:57:04 INFO  : 'con' command is executed.
+20:57:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:57:05 INFO  : Disconnected from the channel tcfchan#14.
+18:58:53 DEBUG : Logs will be stored at 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/IDE.log'.
+18:58:55 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\temp_xsdb_launch_script.tcl
+18:59:07 INFO  : XSCT server has started successfully.
+18:59:07 INFO  : Successfully done setting XSCT server connection channel  
+18:59:07 INFO  : plnx-install-location is set to ''
+18:59:07 INFO  : Platform repository initialization has completed.
+18:59:07 INFO  : Registering command handlers for Vitis TCF services
+18:59:30 INFO  : Successfully done setting workspace for the tool. 
+18:59:42 INFO  : Successfully done query RDI_DATADIR 
+18:59:43 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+18:59:43 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+18:59:43 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+19:02:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:02:33 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+19:02:33 INFO  : 'jtag frequency' command is executed.
+19:02:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:02:34 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:02:34 INFO  : Context for processor 'microblaze_0' is selected.
+19:02:35 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:02:35 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:02:35 INFO  : Context for processor 'microblaze_0' is selected.
+19:02:35 INFO  : System reset is completed.
+19:02:38 INFO  : 'after 3000' command is executed.
+19:02:38 INFO  : Context for processor 'microblaze_0' is selected.
+19:02:38 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+19:02:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+19:02:38 INFO  : Context for processor 'microblaze_0' is selected.
+19:02:38 INFO  : 'con' command is executed.
+19:02:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:02:38 INFO  : Disconnected from the channel tcfchan#2.
+19:04:53 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+19:07:21 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+19:07:21 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+19:07:22 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+19:07:39 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:07:39 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+19:07:39 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+19:07:39 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+19:17:30 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+19:18:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:18:03 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+19:18:03 INFO  : 'jtag frequency' command is executed.
+19:18:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:18:04 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:18:05 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:05 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:18:05 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:18:05 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:05 INFO  : System reset is completed.
+19:18:08 INFO  : 'after 3000' command is executed.
+19:18:08 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:08 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+19:18:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+19:18:08 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:08 INFO  : 'con' command is executed.
+19:18:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:18:08 INFO  : Disconnected from the channel tcfchan#4.
+19:29:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:29:28 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+19:29:28 INFO  : 'jtag frequency' command is executed.
+19:29:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:29:29 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:29:29 INFO  : Context for processor 'microblaze_0' is selected.
+19:29:29 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:29:29 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:29:29 INFO  : Context for processor 'microblaze_0' is selected.
+19:29:29 INFO  : System reset is completed.
+19:29:32 INFO  : 'after 3000' command is executed.
+19:29:32 INFO  : Context for processor 'microblaze_0' is selected.
+19:29:33 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+19:29:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+19:29:33 INFO  : Context for processor 'microblaze_0' is selected.
+19:29:33 INFO  : 'con' command is executed.
+19:29:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:29:33 INFO  : Disconnected from the channel tcfchan#5.
+19:45:36 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+19:46:12 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+19:46:12 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+19:46:13 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+19:46:25 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:46:25 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+19:46:25 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+19:46:25 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+19:47:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:47:15 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+19:47:15 INFO  : 'jtag frequency' command is executed.
+19:47:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:47:17 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:47:17 INFO  : Context for processor 'microblaze_0' is selected.
+19:47:17 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:47:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:47:17 INFO  : Context for processor 'microblaze_0' is selected.
+19:47:17 INFO  : System reset is completed.
+19:47:20 INFO  : 'after 3000' command is executed.
+19:47:20 INFO  : Context for processor 'microblaze_0' is selected.
+19:47:20 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+19:47:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+19:47:20 INFO  : Context for processor 'microblaze_0' is selected.
+19:47:20 INFO  : 'con' command is executed.
+19:47:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:47:20 INFO  : Disconnected from the channel tcfchan#7.
+20:07:33 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+20:08:50 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:08:50 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+20:08:50 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+20:09:08 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:09:08 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+20:09:08 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+20:09:08 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+20:09:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:09:18 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+20:09:18 INFO  : 'jtag frequency' command is executed.
+20:09:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:09:20 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:09:20 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:20 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:09:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:09:20 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:20 INFO  : System reset is completed.
+20:09:23 INFO  : 'after 3000' command is executed.
+20:09:23 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:23 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+20:09:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+20:09:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:24 INFO  : 'con' command is executed.
+20:09:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:09:24 INFO  : Disconnected from the channel tcfchan#9.
+20:29:54 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+20:30:10 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:30:10 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+20:30:11 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+20:30:15 INFO  : The hardware specification used by project 'Lab_6_2' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:30:15 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+20:30:15 INFO  : The file 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+20:30:15 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\Lab_6_2\_ide\bitstream' in project 'Lab_6_2'.
+20:30:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:22 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+20:30:22 INFO  : 'jtag frequency' command is executed.
+20:30:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:30:23 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:30:23 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:23 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:30:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:30:23 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:23 INFO  : System reset is completed.
+20:30:26 INFO  : 'after 3000' command is executed.
+20:30:26 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:27 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+20:30:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+20:30:27 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:27 INFO  : 'con' command is executed.
+20:30:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:30:27 INFO  : Disconnected from the channel tcfchan#11.
+20:46:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:46:22 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+20:46:22 INFO  : 'jtag frequency' command is executed.
+20:46:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:46:24 INFO  : Device configured successfully with "C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:46:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:46:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:46:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:24 INFO  : System reset is completed.
+20:46:27 INFO  : 'after 3000' command is executed.
+20:46:27 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:27 INFO  : The application 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+20:46:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+20:46:27 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:27 INFO  : 'con' command is executed.
+20:46:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:46:27 INFO  : Disconnected from the channel tcfchan#12.
+16:55:19 DEBUG : Logs will be stored at 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/IDE.log'.
+16:55:20 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\temp_xsdb_launch_script.tcl
+16:55:24 INFO  : XSCT server has started successfully.
+16:55:24 INFO  : plnx-install-location is set to ''
+16:55:24 INFO  : Successfully done setting XSCT server connection channel  
+16:55:24 INFO  : Successfully done setting workspace for the tool. 
+16:55:25 INFO  : Platform repository initialization has completed.
+16:55:25 INFO  : Registering command handlers for Vitis TCF services
+16:55:29 INFO  : Successfully done query RDI_DATADIR 
+21:45:54 DEBUG : Logs will be stored at 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/IDE.log'.
+21:45:55 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dasan\OneDrive\Desktop\Lab_6_2_vitis\temp_xsdb_launch_script.tcl
+21:46:00 INFO  : XSCT server has started successfully.
+21:46:00 INFO  : plnx-install-location is set to ''
+21:46:00 INFO  : Successfully done setting XSCT server connection channel  
+21:46:00 INFO  : Successfully done setting workspace for the tool. 
+21:46:26 INFO  : Platform repository initialization has completed.
+21:46:36 INFO  : Registering command handlers for Vitis TCF services
+21:46:42 INFO  : Successfully done query RDI_DATADIR 
+20:37:31 DEBUG : Logs will be stored at 'C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vitis/IDE.log'.
+20:37:33 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\dasan\Desktop\ECE385FinalProject\ece_385_final_vitis\temp_xsdb_launch_script.tcl
+20:37:43 INFO  : Platform repository initialization has completed.
+20:37:44 INFO  : Registering command handlers for Vitis TCF services
+20:37:44 INFO  : XSCT server has started successfully.
+20:37:56 INFO  : Successfully done setting XSCT server connection channel  
+20:37:56 INFO  : plnx-install-location is set to ''
+20:37:56 INFO  : Successfully done query RDI_DATADIR 
+20:37:56 INFO  : Successfully done setting workspace for the tool. 
+20:40:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:40:39 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+20:40:39 INFO  : 'jtag frequency' command is executed.
+20:40:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:40:40 INFO  : Device configured successfully with "C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:40:40 INFO  : Context for processor 'microblaze_0' is selected.
+20:40:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:40:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:40:41 INFO  : Context for processor 'microblaze_0' is selected.
+20:40:41 INFO  : System reset is completed.
+20:40:44 INFO  : 'after 3000' command is executed.
+20:40:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:40:44 INFO  : The application 'C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+20:40:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+20:40:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:40:44 INFO  : 'con' command is executed.
+20:40:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:40:44 INFO  : Disconnected from the channel tcfchan#1.
+21:09:33 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+21:10:07 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+21:10:07 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+21:10:08 INFO  : Checking for BSP changes to sync application flags for project 'Lab_6_2'...
+21:10:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:10:39 INFO  : Jtag cable 'RealDigital Boo 8874292302B2A' is selected.
+21:10:39 INFO  : 'jtag frequency' command is executed.
+21:10:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:10:40 INFO  : Device configured successfully with "C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit"
+21:10:41 INFO  : Context for processor 'microblaze_0' is selected.
+21:10:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+21:10:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:10:41 INFO  : Context for processor 'microblaze_0' is selected.
+21:10:41 INFO  : System reset is completed.
+21:10:44 INFO  : 'after 3000' command is executed.
+21:10:44 INFO  : Context for processor 'microblaze_0' is selected.
+21:10:44 INFO  : The application 'C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vitis/Lab_6_2/Debug/Lab_6_2.elf' is downloaded to processor 'microblaze_0'.
+21:10:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292302B2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vitis/Lab_6_2/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/dasan/OneDrive/Desktop/Lab_6_2_vitis/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vitis/Lab_6_2/Debug/Lab_6_2.elf
+----------------End of Script----------------
+
+21:10:44 INFO  : Context for processor 'microblaze_0' is selected.
+21:10:44 INFO  : 'con' command is executed.
+21:10:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:10:44 INFO  : Disconnected from the channel tcfchan#3.

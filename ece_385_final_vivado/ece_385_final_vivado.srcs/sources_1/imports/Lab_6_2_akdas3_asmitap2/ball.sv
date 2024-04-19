@@ -33,9 +33,10 @@ module  ball
     parameter [9:0] Ball_X_Min=0;       // Leftmost point on the X axis
     parameter [9:0] Ball_X_Max=639;     // Rightmost point on the X axis
     parameter [9:0] Ball_Y_Min=0;       // Topmost point on the Y axis
-    parameter [9:0] Ball_Y_Max=479;     // Bottommost point on the Y axis
+    parameter [9:0] Ball_Y_Max=400;     // Bottommost point on the Y axis // OG = 479
     parameter [9:0] Ball_X_Step=1;      // Step size on the X axis
     parameter [9:0] Ball_Y_Step=1;      // Step size on the Y axis
+    
     
     parameter grav=1;      // Step size on the Y axis
 
@@ -109,6 +110,7 @@ module  ball
             end
             state_next = GND;
         end
+        
         else if ( (BallY - BallS) <= Ball_Y_Min )  // Ball is at the top edge, BOUNCE!
         begin
             Ball_Y_Motion_next = Ball_Y_Step;
