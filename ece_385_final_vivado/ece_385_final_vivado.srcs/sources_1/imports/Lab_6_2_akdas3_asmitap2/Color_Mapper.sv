@@ -14,10 +14,14 @@
 //-------------------------------------------------------------------------
 
 
-module  color_mapper ( input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size,
+module  color_mapper ( input logic vga_clk, //change
+                        input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size,
                        output logic [3:0]  Red, Green, Blue );
     
     logic ball_on;
+    logic [18:0] rom_address; //added change
+    logic [7:0] rom_q; //added change
+    logic [3:0] palette_red, palette_green, palette_blue; //added change
 	 
  /* Old Ball: Generated square box by checking if the current pixel is within a square of length
     2*BallS, centered at (BallX, BallY).  Note that this requires unsigned comparisons.
@@ -45,7 +49,31 @@ module  color_mapper ( input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size,
         else 
             ball_on = 1'b0;
      end 
-       
+    
+
+//////////////////////////// BACKGROUND SPRITE ////////////////////////////
+
+// Background sprite address calculation
+// Adjust dimensions as per your sprite or screen resolution
+assign rom_address = ((DrawX * 639) / 640) + (((DrawY * 469) / 480) * 639);
+
+// Instantiate the ROM and Palette modules
+level1_rom background_rom (
+    .clock  (~vga_clk),
+    .address(rom_address),
+    .q      (rom_q)
+);
+
+level1_palette sprite_palette (
+    .index (rom_q),
+    .red   (palette_red),
+    .green (palette_green),
+    .blue  (palette_blue)
+);
+
+
+
+// Display logic
     always_comb
     begin:RGB_Display
         if ((ball_on == 1'b1)) begin 
@@ -56,14 +84,14 @@ module  color_mapper ( input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size,
         else if (DrawY >= 470)
         begin
             Red = 4'h0;
-            Green = 4'hf;
-            Blue = 4'h0;
+            Green = 4'h0;
+            Blue = 4'hf;
         end
         else
         begin 
-            Red = 4'hf - DrawX[9:6]; 
-            Green = 4'hf - DrawX[9:6];
-            Blue = 4'hf - DrawX[9:6];
+            Red = palette_red;
+            Green = palette_green;
+            Blue = palette_blue;
         end      
     end 
     
