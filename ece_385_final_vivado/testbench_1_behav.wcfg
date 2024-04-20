@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_1_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="ipif_pkg" />
+            <top_module name="lib_pkg" />
+            <top_module name="lmb_bram_if_funcs" />
+            <top_module name="mdm_funcs" />
+            <top_module name="tc_types" />
+            <top_module name="testbench_1" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="23.040001 us"></ZoomEndTime>
+      <Cursor1Time time="4.603129 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="220"></NameColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/testbench_1/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/reset_rtl_0" type="logic">
+      <obj_property name="ElementShortName">reset_rtl_0</obj_property>
+      <obj_property name="ObjectShortName">reset_rtl_0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/BallX" type="array">
+      <obj_property name="ElementShortName">BallX[9:0]</obj_property>
+      <obj_property name="ObjectShortName">BallX[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/Ball_X_next" type="array">
+      <obj_property name="ElementShortName">Ball_X_next[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Ball_X_next[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/BallY" type="array">
+      <obj_property name="ElementShortName">BallY[9:0]</obj_property>
+      <obj_property name="ObjectShortName">BallY[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/Ball_Y_next" type="array">
+      <obj_property name="ElementShortName">Ball_Y_next[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Ball_Y_next[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/Ball_Y_Motion" type="array">
+      <obj_property name="ElementShortName">Ball_Y_Motion[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Ball_Y_Motion[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/Ball_Y_Motion_next" type="array">
+      <obj_property name="ElementShortName">Ball_Y_Motion_next[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Ball_Y_Motion_next[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/state_next" type="other">
+      <obj_property name="ElementShortName">state_next</obj_property>
+      <obj_property name="ObjectShortName">state_next</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/Ball_Y_Max" type="array">
+      <obj_property name="ElementShortName">Ball_Y_Max[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Ball_Y_Max[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench_1/mb_usb/ball_instance/keycode" type="array">
+      <obj_property name="ElementShortName">keycode[7:0]</obj_property>
+      <obj_property name="ObjectShortName">keycode[7:0]</obj_property>
+   </wvobject>
+</wave_config>

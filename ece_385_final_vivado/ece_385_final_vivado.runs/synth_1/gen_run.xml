@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1713491231" LaunchIncrCheckpoint="$PPRDIR/../../fpga-celeste/ece_385_final/ece_385_final.srcs/utils_1/imports/synth_1/mb_usb_hdmi_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1713649856" LaunchIncrCheckpoint="$PPRDIR/../../fpga-celeste/ece_385_final/ece_385_final.srcs/utils_1/imports/synth_1/mb_usb_hdmi_top.dcp">
   <File Type="PA-TCL" Name="mb_usb_hdmi_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="mb_usb_hdmi_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mb_usb_hdmi_top_reports.tcl"/>
@@ -38,10 +38,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Lab_6_2_akdas3_asmitap2/ball.sv">
+    <File Path="$PSRCDIR/sources_1/new/control.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/ball.sv"/>
-        <Attr Name="ImportTime" Val="1711061754"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -60,6 +58,16 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/mb_usb_hdmi_top.sv"/>
         <Attr Name="ImportTime" Val="1711054644"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Lab_6_2_akdas3_asmitap2/ball.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/ball.sv"/>
+        <Attr Name="ImportTime" Val="1711061754"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

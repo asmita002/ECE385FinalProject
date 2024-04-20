@@ -33,7 +33,7 @@ module  ball
     parameter [9:0] Ball_X_Min=0;       // Leftmost point on the X axis
     parameter [9:0] Ball_X_Max=639;     // Rightmost point on the X axis
     parameter [9:0] Ball_Y_Min=0;       // Topmost point on the Y axis
-    parameter [9:0] Ball_Y_Max=400;     // Bottommost point on the Y axis // OG = 479
+    parameter [9:0] Ball_Y_Max=470;     // Bottommost point on the Y axis // OG = 479
     parameter [9:0] Ball_X_Step=1;      // Step size on the X axis
     parameter [9:0] Ball_Y_Step=1;      // Step size on the Y axis
     
@@ -49,23 +49,15 @@ module  ball
     logic [9:0] Ball_X_next;
     logic [9:0] Ball_Y_next;
     
-    typedef enum logic {GND, AIR} state_t;
-
-    state_t state;
-    state_t state_next;
+    enum logic {GND, AIR} state, state_next;
         
     always_comb begin
         gnd_flag = 0;
-        if (state == AIR)
-        begin
-            Ball_Y_Motion_next = Ball_Y_Motion + grav;                     
-        end
-        else
-        begin
-            Ball_Y_Motion_next = 0;         
-        end
+                Ball_Y_Motion_next = Ball_Y_Motion + grav;
         Ball_X_Motion_next = 0;
-
+        begin
+        end
+        
         //modify to control ball motion with the keycode
 //        if (keycode == 8'h1A) // keycode for W
 //        begin

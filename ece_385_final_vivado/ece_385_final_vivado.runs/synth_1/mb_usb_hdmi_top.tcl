@@ -91,7 +91,7 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/Color_Mapper.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/VGA_controller.sv
-  C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/ball.sv
+  C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/new/control.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/hex_driver.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/mb_usb_hdmi_top.sv
 }
