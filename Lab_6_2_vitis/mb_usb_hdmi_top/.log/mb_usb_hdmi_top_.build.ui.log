@@ -1,6 +1,6 @@
-2024-04-20T17:01:04.968559400255-17:01:05 **** Build of project mb_usb_hdmi_top ****
-000-buildplatform.bat 55959 mb_usb_hdmi_top  
-000-XSDB Server Channel: tcfchan#3
+2024-04-21T14:07:44.506620300255-14:07:44 **** Incremental Build of project mb_usb_hdmi_top ****
+000-buildplatform.bat 51066 mb_usb_hdmi_top no_domain_build 
+000-xsct% XSDB Server Channel: tcfchan#5
 000-C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 000-Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 000-make --no-print-directory seq_libs
@@ -9,9 +9,11 @@
 000-
 000-make -j 14 --no-print-directory par_libs
 000-
+000-"Running Make include in microblaze_0/libsrc/bram_v4_8/src"
+000-
 000-"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
 000-
-000-"Running Make include in microblaze_0/libsrc/bram_v4_8/src"
+000-"Running Make include in microblaze_0/libsrc/gpio_v4_9/src"
 000-
 000-make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
 000-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
@@ -20,8 +22,6 @@
 000-make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
 000-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
 000-MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
-000-
-000-"Running Make include in microblaze_0/libsrc/gpio_v4_9/src"
 000-
 000-make -C microblaze_0/libsrc/gpio_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
 000-R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
@@ -59,11 +59,11 @@
 000-
 000-"Running Make libs in microblaze_0/libsrc/bram_v4_8/src"
 000-
-000-"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
-000-
 000-make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
 000-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
 000-LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
 000-
 000-make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
 000-LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
@@ -77,13 +77,13 @@
 000-
 000-"Running Make libs in microblaze_0/libsrc/intc_v3_15/src"
 000-
-000-"Running Make libs in microblaze_0/libsrc/standalone_v8_0/src"
-000-
-000-"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
-000-
 000-make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
 000-FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMP
 000-ILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+000-
+000-"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
+000-
+000-"Running Make libs in microblaze_0/libsrc/standalone_v8_0/src"
 000-
 000-"Running Make libs in microblaze_0/libsrc/tmrctr_v4_9/src"
 000-
@@ -145,5 +145,5 @@
 000-'Finished building libraries'
 000-
 00255-
-17:01:32 Build Finished (took 27s.719ms)
+14:07:57 Build Finished (took 12s.559ms)
 

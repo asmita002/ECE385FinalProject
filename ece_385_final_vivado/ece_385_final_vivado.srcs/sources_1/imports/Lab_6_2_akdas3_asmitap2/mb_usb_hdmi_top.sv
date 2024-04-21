@@ -39,6 +39,7 @@ module mb_usb_hdmi_top(
     output logic [7:0] hex_segB,
     output logic [3:0] hex_gridB
 );
+    logic [7:0] kc_1, kc_2, kc_3, kc_4;
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
@@ -137,23 +138,51 @@ module mb_usb_hdmi_top(
     //Ball Module
     control ctrl_unit(
         .Reset(reset_ah),
-        .frame_clk(vsync),                    //Figure out what this should be so that the ball will move
-        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
+        .frame_clk(vsync),                //Figure out what this should be so that the ball will move
+//        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
+        .keycode_1(keycode0_gpio[7:0]),
+        .keycode_2(keycode0_gpio[15:8]),
         .CharX(ballxsig),
         .CharY(ballysig),
         .CharS(ballsizesig)
     );
     
-    //Color Mapper Module   
-    color_mapper color_instance(
-        .BallX(ballxsig),
-        .BallY(ballysig),
-        .DrawX(drawX),
-        .DrawY(drawY),
-        .Ball_size(ballsizesig),
-        .Red(red),
-        .Green(green),
-        .Blue(blue)
+//    //Color Mapper Module   
+//    color_mapper color_instance(
+//        .vga_clk(clk_25MHz),
+//        .BallX(ballxsig),
+//        .BallY(ballysig),
+//        .DrawX(drawX),
+//        .DrawY(drawY),
+//        .Ball_size(ballsizesig),
+//        .Red(red),
+//        .Green(green),
+//        .Blue(blue)
+//    );
+
+ keycode_splitter kc(
+    .Clk(vsync),
+    .full_keycode(keycode0_gpio[7:0]), 
+    
+    .keycode_1(kc_1), 
+    .keycode_2(kc_2), 
+    .keycode_3(kc_3), 
+    .keycode_4(kc_4)
     );
+
+ LVL_1_BGD_example lvl1_instance(
+    .BallX(ballxsig),
+    .BallY(ballysig),
+    .Ball_size(ballsizesig),
+
+	.vga_clk(clk_25MHz),
+	.DrawX(drawX), 
+	.DrawY(drawY),
+	.blank(vde),
+	.red(red), 
+	.green(green), 
+	.blue(blue)
+);
+
     
 endmodule

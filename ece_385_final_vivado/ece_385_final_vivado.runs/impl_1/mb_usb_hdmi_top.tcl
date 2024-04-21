@@ -123,6 +123,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1
   set_property design_mode GateLvl [current_fileset]
@@ -141,6 +142,7 @@ OPTRACE "add files" START { }
   add_files -quiet C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.runs/synth_1/mb_usb_hdmi_top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
+  read_ip -quiet C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/ip/LVL_1_BGD_rom/LVL_1_BGD_rom.xci
   add_files C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/bd/mb_block/mb_block.bd
   read_ip -quiet C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
   read_ip -quiet C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci

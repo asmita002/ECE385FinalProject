@@ -1,0 +1,22 @@
+timestamp=[2024-04-21 14:10:53], mode=WORKBENCH_START, duration=0:00:04.475, duration_ms=4475, data={}
+timestamp=[2024-04-21 14:10:53], mode=WORKBENCH_UI_INIT, duration=0:00:00.246, duration_ms=246, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2024-04-21 14:10:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.086, duration_ms=86, data={}
+timestamp=[2024-04-21 14:11:40], mode=APP_CREATION, duration=0:00:03.015, duration_ms=3015, data={name=celeste_fpga, project_type=sdk, os=standalone, processor=microblaze, runtime=cpp, platform=mb_usb_hdmi_top, application_type=application}
+timestamp=[2024-04-21 14:13:54], mode=PLATFORM_GENERATION, duration=0:00:04.310, duration_ms=4310, data={name=mb_usb_hdmi_top}
+timestamp=[2024-04-21 14:13:57], mode=BUILD, duration=0:00:02.820, duration_ms=2820, data={name=celeste_fpga, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 14:13:57], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=celeste_fpga_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 14:27:26], mode=PLATFORM_GENERATION, duration=0:00:06.650, duration_ms=6650, data={name=mb_usb_hdmi_top}
+timestamp=[2024-04-21 14:27:29], mode=BUILD, duration=0:00:01.842, duration_ms=1842, data={name=celeste_fpga, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 14:27:29], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=celeste_fpga_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 15:27:49], mode=PLATFORM_GENERATION, duration=0:00:08.378, duration_ms=8378, data={name=mb_usb_hdmi_top}
+timestamp=[2024-04-21 15:27:52], mode=BUILD, duration=0:00:02.158, duration_ms=2158, data={name=celeste_fpga, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 15:27:52], mode=BUILD, duration=0:00:00.189, duration_ms=189, data={name=celeste_fpga_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 15:53:35], mode=PLATFORM_GENERATION, duration=0:00:14.371, duration_ms=14371, data={name=mb_usb_hdmi_top}
+timestamp=[2024-04-21 15:53:38], mode=BUILD, duration=0:00:03.267, duration_ms=3267, data={name=celeste_fpga, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 15:53:39], mode=BUILD, duration=0:00:00.251, duration_ms=251, data={name=celeste_fpga_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 16:16:31], mode=PLATFORM_GENERATION, duration=0:00:14.164, duration_ms=14164, data={name=mb_usb_hdmi_top}
+timestamp=[2024-04-21 16:16:35], mode=BUILD, duration=0:00:03.177, duration_ms=3177, data={name=celeste_fpga, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 16:16:36], mode=BUILD, duration=0:00:00.252, duration_ms=252, data={name=celeste_fpga_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 16:26:24], mode=PLATFORM_GENERATION, duration=0:00:13.559, duration_ms=13559, data={name=mb_usb_hdmi_top}
+timestamp=[2024-04-21 16:26:27], mode=BUILD, duration=0:00:03.013, duration_ms=3013, data={name=celeste_fpga, configuration=Debug, clean_build=false}
+timestamp=[2024-04-21 16:26:28], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=celeste_fpga_system, configuration=Debug, clean_build=false}

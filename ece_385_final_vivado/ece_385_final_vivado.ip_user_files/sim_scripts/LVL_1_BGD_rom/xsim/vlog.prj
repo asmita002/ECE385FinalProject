@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../ece_385_final_vivado.gen/sources_1/ip/LVL_1_BGD_rom/sim/LVL_1_BGD_rom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

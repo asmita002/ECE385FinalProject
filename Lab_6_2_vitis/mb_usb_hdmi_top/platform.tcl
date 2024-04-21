@@ -76,3 +76,11 @@ platform generate
 platform active {mb_usb_hdmi_top}
 platform config -updatehw {C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/mb_usb_hdmi_top.xsa}
 platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/BUCKETS_OF_JIZZ.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/HELP.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/KMS.xsa}
+platform generate -domains 
+catch {platform remove mb_usb_hdmi_top}

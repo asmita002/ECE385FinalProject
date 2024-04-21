@@ -48,45 +48,39 @@ module  color_mapper ( input logic vga_clk, //change
             ball_on = 1'b1;
         else 
             ball_on = 1'b0;
-     end 
-    
+     end
 
 //////////////////////////// BACKGROUND SPRITE ////////////////////////////
 
 // Background sprite address calculation
 // Adjust dimensions as per your sprite or screen resolution
-assign rom_address = ((DrawX * 639) / 640) + (((DrawY * 469) / 480) * 639);
+assign rom_address = ((DrawX * 160) / 640) + (((DrawY * 160) / 480) * 160);
 
 // Instantiate the ROM and Palette modules
-level1_rom background_rom (
-    .clock  (~vga_clk),
-    .address(rom_address),
-    .q      (rom_q)
+LVL_1_BGD_rom LVL_1_BGD_rom (
+	.clka   (negedge_vga_clk),
+	.addra (rom_address),
+	.douta       (rom_q)
 );
 
-level1_palette sprite_palette (
-    .index (rom_q),
-    .red   (palette_red),
-    .green (palette_green),
-    .blue  (palette_blue)
+LVL_1_BGD_palette LVL_1_BGD_palette (
+	.index (rom_q),
+	.red   (palette_red),
+	.green (palette_green),
+	.blue  (palette_blue)
 );
 
 
 
 // Display logic
-    always_comb
+    always_ff @ (posedge vga_clk)
     begin:RGB_Display
         if ((ball_on == 1'b1)) begin 
-            Red = 4'hf;
-            Green = 4'h7;
-            Blue = 4'h0;
+            Red <= 4'hf;
+            Green <= 4'h7;
+            Blue <= 4'h0;
         end       
-        else if (DrawY >= 470)
-        begin
-            Red = 4'h0;
-            Green = 4'h0;
-            Blue = 4'hf;
-        end
+
         else
         begin 
             Red = palette_red;

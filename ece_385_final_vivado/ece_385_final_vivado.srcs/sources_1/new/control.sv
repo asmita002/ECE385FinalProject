@@ -23,9 +23,9 @@
 module control(
     input  logic        Reset, 
     input  logic        frame_clk,
-    input  logic [7:0]  keycode,
-//    input  logic [7:0]  keycode_1,
-//    input  logic [7:0]  keycode_2,
+//    input  logic [7:0]  keycode,
+    input  logic [7:0]  keycode_1,
+    input  logic [7:0]  keycode_2,
 
     output logic [9:0]  CharX, 
     output logic [9:0]  CharY, 
@@ -39,10 +39,14 @@ module control(
     parameter [9:0] Char_X_Min=0;       // Leftmost point on the X axis
     parameter [9:0] Char_X_Max=639;     // Rightmost point on the X axis
     parameter [9:0] Char_Y_Min=0;       // Topmost point on the Y axis
-    parameter [9:0] Char_Y_Max=470;     // Bottommost point on the Y axis // OG = 479
+    parameter [9:0] Char_Y_Max=479;     // Bottommost point on the Y axis // OG = 479
     parameter [9:0] Char_X_Step=1;      // Step size on the X axis
     parameter [9:0] Char_Y_Step=1;      // Step size on the Y axis
     
+    parameter [9:0] start_y = 388;
+    parameter [9:0] mound_y = 373;
+    parameter [9:0] mound_left = 125;
+    parameter [9:0] mound_right= 203;
     
     parameter grav=1;      // Step size on the Y axis
 
@@ -50,7 +54,7 @@ module control(
     logic [9:0] Char_X_Motion_next;
     logic [9:0] Char_Y_Motion;
     logic [9:0] Char_Y_Motion_next;
-//    logic gnd_flag;
+    logic gnd_flag;
 
     logic [9:0] Char_X_next;
     logic [9:0] Char_Y_next;
@@ -81,6 +85,7 @@ module control(
 	   show_menu = 0;
 	   Char_Y_Motion_next = 0;
 	   Char_X_Motion_next = 0;
+	   gnd_flag = 0;
 	   
 	   case (state)
 	       MENU:
@@ -100,37 +105,37 @@ module control(
                Char_Y_Motion_next = Char_Y_Motion + grav;
                
                // keyboard input, only horizontal movement controllable
-//               if (keycode_2 == 8'h04  || (keycode_1 == 8'h04 && keycode_2 != 8'h07) ) // A (Left)
-               if (keycode == 8'h04)
+               if (keycode_2 == 8'h04  || (keycode_1 == 8'h04 && keycode_2 != 8'h07) ) // A (Left)
+//               if (keycode == 8'h04)
                begin
-                    Char_X_Motion_next = -10'd1;
+                    Char_X_Motion_next = -10'd2;
                end
                
-//               if (keycode_2 == 8'h07  || (keycode_1 == 8'h07 && keycode_2 != 8'h04) ) // D (Right)
-               if (keycode == 8'h07)
+               if (keycode_2 == 8'h07  || (keycode_1 == 8'h07 && keycode_2 != 8'h04) ) // D (Right)
+//               if (keycode == 8'h07)
                begin
-                    Char_X_Motion_next = 10'd1;
+                    Char_X_Motion_next = 10'd2;
                end               	           
 	       end
            
 	       GND:
 	       begin
-//               if (keycode_1 == 8'h1A || keycode_2 == 8'h1A) // W (Jump)
-               if (keycode == 8'h1A)
+               if (keycode_1 == 8'h1A || keycode_2 == 8'h1A) // W (Jump)
+//               if (keycode == 8'h1A)
                begin
                     Char_Y_Motion_next = -10'd10;
                end
 
-//               if (keycode_2 == 8'h04  || (keycode_1 == 8'h04 && keycode_2 != 8'h07) ) // A (Left)
-               if (keycode == 8'h04)
+               if (keycode_2 == 8'h04  || (keycode_1 == 8'h04 && keycode_2 != 8'h07) ) // A (Left)
+//               if (keycode == 8'h04)
                begin
-                    Char_X_Motion_next = -10'd1;
+                    Char_X_Motion_next = -10'd2;
                end
                
-//               if (keycode_2 == 8'h07  || (keycode_1 == 8'h07 && keycode_2 != 8'h04) ) // D (Right)
-               if (keycode == 8'h07)
+               if (keycode_2 == 8'h07  || (keycode_1 == 8'h07 && keycode_2 != 8'h04) ) // D (Right)
+//               if (keycode == 8'h07)
                begin
-                    Char_X_Motion_next = 10'd1;
+                    Char_X_Motion_next = 10'd2;
                end
                
 	       end
@@ -141,9 +146,34 @@ module control(
        // next cycle's position
        Char_X_next = (CharX + Char_X_Motion_next);
        Char_Y_next = (CharY + Char_Y_Motion_next);
+       
+       // collision detection
+       // start ground 
+       if ( ((Char_Y_next + CharS) > start_y) && ((Char_X_next + CharS) <= mound_left) ) // on ground at left
+       begin
+           Char_Y_next = start_y - CharS;
+           Char_Y_Motion_next = 0;
+           gnd_flag = 1;
+       end
+       
+//       // mound left wall
+//       if ((Char_X_next + CharS >= mound_left) && (Char_Y_next+CharS <= start_y ) && (Char_Y_next+CharS >= mound_y))
+//       begin
+//        Char_X_next = mound_left - CharS;
+//        Char_X_Motion = 0;
+//       end
+       
+       // mound ground
+       if ( ((Char_Y_next + CharS) >= mound_y) && (Char_X_next+CharS >= mound_left) && (Char_X_next-CharS <= mound_right) )
+       begin
+       Char_Y_next = mound_y - CharS;
+       Char_Y_Motion_next = 0;
+       gnd_flag = 1;
+       end
+       
 
        // vertical collision detection
-       if ( ((Char_Y_next + CharS) >= Char_Y_Max) ) // reached ground
+       if ( ((Char_Y_next + CharS) >= Char_Y_Max) ) 
        begin
            Char_Y_next = Char_Y_Max - CharS;
            Char_Y_Motion_next = 0;
@@ -154,6 +184,8 @@ module control(
            Char_Y_next = Char_Y_Min + CharS;
            Char_Y_Motion_next = 0;
        end
+       
+       
        
        // horizontal collision detection
        if ( ((Char_X_next + CharS) >= Char_X_Max) ) // reached right border
@@ -179,8 +211,8 @@ module control(
 	   case (state)
 	       MENU:
 	       begin
-//	           if (keycode_1 || keycode_2)
-	           if (keycode) // press any key to start
+	           if (keycode_1)
+//	           if (keycode) // press any key to start
 	           begin
 	               state_next = START;
 	           end
@@ -193,7 +225,7 @@ module control(
 
 	       AIR:
 	       begin
-	           if ((Char_Y_next + CharS) >= Char_Y_Max) // reached the ground
+	           if (gnd_flag) // reached the ground
 	           begin
 	               state_next = GND;
 	           end
@@ -201,8 +233,8 @@ module control(
            
 	       GND:
 	       begin
-//               if (keycode_1 == 8'h1A || keycode_2 == 8'h1A) // W (Jump)
-               if (keycode == 8'h1A)
+               if (keycode_1 == 8'h1A || keycode_2 == 8'h1A) // W (Jump)
+//               if (keycode == 8'h1A)
                begin
                     state_next = AIR;
                end               

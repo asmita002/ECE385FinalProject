@@ -3,6 +3,9 @@
 
 # XDC: imports/pin_assignment/mb_usb_hdmi_top.xdc
 
+# IP: ip/LVL_1_BGD_rom/LVL_1_BGD_rom.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==LVL_1_BGD_rom || ORIG_REF_NAME==LVL_1_BGD_rom} -quiet] -quiet
+
 # Block Designs: bd/mb_block/mb_block.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block || ORIG_REF_NAME==mb_block} -quiet] -quiet
 

@@ -143,7 +143,7 @@ module  ball
 			Ball_X_Motion <= Ball_X_Motion_next; 
             if (gnd_flag)
             begin
-                BallY <= Ball_Y_Max-BallS;
+                BallY <= Balwl_Y_Max-BallS;
 //                gnd_flg <= 0;
             end
             else

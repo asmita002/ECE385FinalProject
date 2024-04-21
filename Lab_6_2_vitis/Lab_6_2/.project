@@ -3,7 +3,6 @@
 	<name>Lab_6_2</name>
 	<comment>Created by Vitis v2022.2</comment>
 	<projects>
-		<project>mb_usb_hdmi_top</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

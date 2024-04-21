@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -88,13 +90,21 @@ set_property ip_output_repo c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_fi
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files C:/Users/dasan/Desktop/ECE385FinalProject/Image_to_COE/butterfly/butterfly.COE
+add_files C:/Users/dasan/Desktop/ECE385FinalProject/level1/level1.COE
+add_files C:/Users/dasan/Desktop/ECE385FinalProject/Image_to_COE/LVL_1_BGD/LVL_1_BGD.COE
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/Color_Mapper.sv
+  C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/LVL_1_BGD/LVL_1_BGD_example.sv
+  C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/LVL_1_BGD/LVL_1_BGD_palette.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/VGA_controller.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/new/control.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/hex_driver.sv
+  C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/new/keycode_splitter.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/mb_usb_hdmi_top.sv
 }
+read_ip -quiet C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/ip/LVL_1_BGD_rom/LVL_1_BGD_rom.xci
+set_property used_in_implementation false [get_files -all c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.gen/sources_1/ip/LVL_1_BGD_rom/LVL_1_BGD_rom_ooc.xdc]
+
 add_files C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/bd/mb_block/mb_block.bd
 set_property used_in_implementation false [get_files -all c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0_ooc_debug.xdc]
