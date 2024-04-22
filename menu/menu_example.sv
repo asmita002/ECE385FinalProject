@@ -1,4 +1,4 @@
-module celeste-start-screen_example (
+module menu_example (
 	input logic vga_clk,
 	input logic [9:0] DrawX, DrawY,
 	input logic blank,
@@ -31,13 +31,13 @@ always_ff @ (posedge vga_clk) begin
 	end
 end
 
-celeste-start-screen_rom celeste-start-screen_rom (
+menu_rom menu_rom (
 	.clka   (negedge_vga_clk),
 	.addra (rom_address),
 	.douta       (rom_q)
 );
 
-celeste-start-screen_palette celeste-start-screen_palette (
+menu_palette menu_palette (
 	.index (rom_q),
 	.red   (palette_red),
 	.green (palette_green),
