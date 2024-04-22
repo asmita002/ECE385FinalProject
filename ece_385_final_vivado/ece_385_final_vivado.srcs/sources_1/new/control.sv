@@ -44,8 +44,8 @@ module control(
     parameter [9:0] Char_Y_Step=1;      // Step size on the Y axis
     
     parameter [9:0] start_y = 388;
-    parameter [9:0] mound_y = 373;
-    parameter [9:0] mound_left = 125;
+    parameter [9:0] mound_y = 369;
+    parameter [9:0] mound_left = 120;
     parameter [9:0] mound_right= 203;
     
     parameter grav=1;      // Step size on the Y axis
@@ -54,6 +54,8 @@ module control(
     logic [9:0] Char_X_Motion_next;
     logic [9:0] Char_Y_Motion;
     logic [9:0] Char_Y_Motion_next;
+
+//    ground flag means that the next cycle needs to be in the ground state
     logic gnd_flag;
 
     logic [9:0] Char_X_next;
@@ -149,26 +151,26 @@ module control(
        
        // collision detection
        // start ground 
-       if ( ((Char_Y_next + CharS) > start_y) && ((Char_X_next + CharS) <= mound_left) ) // on ground at left
+       if ( ((Char_Y_next + CharS) >= start_y) && ((Char_X_next + CharS) <= mound_left) ) // on ground at left
        begin
            Char_Y_next = start_y - CharS;
            Char_Y_Motion_next = 0;
            gnd_flag = 1;
        end
        
-//       // mound left wall
-//       if ((Char_X_next + CharS >= mound_left) && (Char_Y_next+CharS <= start_y ) && (Char_Y_next+CharS >= mound_y))
-//       begin
-//        Char_X_next = mound_left - CharS;
-//        Char_X_Motion = 0;
-//       end
+       // mound left wall
+       if ((Char_X_next + CharS >= mound_left) && (Char_Y_next+CharS <= start_y ) && (Char_Y_next+CharS > mound_y))
+       begin
+        Char_X_next = mound_left - CharS;
+        Char_X_Motion = 0;
+       end
        
        // mound ground
-       if ( ((Char_Y_next + CharS) >= mound_y) && (Char_X_next+CharS >= mound_left) && (Char_X_next-CharS <= mound_right) )
+       if ( ((Char_Y_next + CharS) >= mound_y) && (Char_X_next+CharS > mound_left) && (Char_X_next-CharS <= mound_right) )
        begin
-       Char_Y_next = mound_y - CharS;
-       Char_Y_Motion_next = 0;
-       gnd_flag = 1;
+           Char_Y_next = mound_y - CharS;
+           Char_Y_Motion_next = 0;
+           gnd_flag = 1;
        end
        
 
@@ -177,6 +179,7 @@ module control(
        begin
            Char_Y_next = Char_Y_Max - CharS;
            Char_Y_Motion_next = 0;
+           gnd_flag = 1;
        end
        
        if ( (Char_Y_next - CharS) <= Char_Y_Min ) // hit the top
@@ -233,8 +236,8 @@ module control(
            
 	       GND:
 	       begin
-               if (keycode_1 == 8'h1A || keycode_2 == 8'h1A) // W (Jump)
-//               if (keycode == 8'h1A)
+//               if (keycode_1 == 8'h1A || keycode_2 == 8'h1A) // W (Jump)
+               if (~gnd_flag)
                begin
                     state_next = AIR;
                end               

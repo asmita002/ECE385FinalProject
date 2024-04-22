@@ -146,6 +146,7 @@ OPTRACE "add files" START { }
   add_files C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/bd/mb_block/mb_block.bd
   read_ip -quiet C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
   read_ip -quiet C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/ip/celeste_rom/celeste_rom.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc

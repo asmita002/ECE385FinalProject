@@ -93,10 +93,12 @@ OPTRACE "Adding files" START { }
 add_files C:/Users/dasan/Desktop/ECE385FinalProject/Image_to_COE/butterfly/butterfly.COE
 add_files C:/Users/dasan/Desktop/ECE385FinalProject/level1/level1.COE
 add_files C:/Users/dasan/Desktop/ECE385FinalProject/Image_to_COE/LVL_1_BGD/LVL_1_BGD.COE
+add_files c:/Users/dasan/Desktop/ECE385FinalProject/celeste/celeste.COE
 read_verilog -library xil_defaultlib -sv {
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/LVL_1_BGD/LVL_1_BGD_example.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/LVL_1_BGD/LVL_1_BGD_palette.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/VGA_controller.sv
+  C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/celeste/celeste_palette.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/new/control.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/imports/Lab_6_2_akdas3_asmitap2/hex_driver.sv
   C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/new/keycode_splitter.sv
@@ -153,6 +155,9 @@ read_ip -quiet C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ec
 set_property used_in_implementation false [get_files -all c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+
+read_ip -quiet c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.srcs/sources_1/ip/celeste_rom/celeste_rom.xci
+set_property used_in_implementation false [get_files -all c:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/ece_385_final_vivado.gen/sources_1/ip/celeste_rom/celeste_rom_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

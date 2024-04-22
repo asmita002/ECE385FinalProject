@@ -171,9 +171,9 @@ module mb_usb_hdmi_top(
     );
 
  LVL_1_BGD_example lvl1_instance(
-    .BallX(ballxsig),
-    .BallY(ballysig),
-    .Ball_size(ballsizesig),
+    .CharX(ballxsig),
+    .CharY(ballysig),
+    .Char_size(ballsizesig),
 
 	.vga_clk(clk_25MHz),
 	.DrawX(drawX), 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1713734395" LaunchIncrCheckpoint="$PPRDIR/../../fpga-celeste/ece_385_final/ece_385_final.srcs/utils_1/imports/synth_1/mb_usb_hdmi_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1713762424" LaunchIncrCheckpoint="$PPRDIR/../../fpga-celeste/ece_385_final/ece_385_final.srcs/utils_1/imports/synth_1/mb_usb_hdmi_top.dcp">
   <File Type="PA-TCL" Name="mb_usb_hdmi_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="mb_usb_hdmi_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mb_usb_hdmi_top_reports.tcl"/>
@@ -49,6 +49,15 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../OneDrive/Documents/UIUC/2024 Spring/ECE 385/REPORT_Lab_6_2_akdas3_asmitap2/Lab_6_2_akdas3_asmitap2/VGA_controller.sv"/>
         <Attr Name="ImportTime" Val="1710981826"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/celeste/celeste_palette.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../celeste/celeste_palette.sv"/>
+        <Attr Name="ImportTime" Val="1713735196"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -154,6 +163,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/celeste/celeste_example.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../celeste/celeste_example.sv"/>
+        <Attr Name="ImportTime" Val="1713735195"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../celeste/celeste.COE">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="mb_usb_hdmi_top"/>
@@ -211,4 +236,5 @@
   <BlockFileSet Type="BlockSrcs" Name="mb_block_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_timer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_block_axi_gpio_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="celeste_rom"/>
 </GenRun>

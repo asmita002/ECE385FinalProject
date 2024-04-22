@@ -1,4 +1,4 @@
-16:26:24 **** Incremental Build of configuration Debug for project celeste_fpga ****
+00:38:38 **** Incremental Build of configuration Debug for project celeste_fpga ****
 make all 
 'Building file: ../src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -90,5 +90,5 @@ mb-size celeste_fpga.elf  |tee "celeste_fpga.elf.size"
 'Finished building: celeste_fpga.elf.size'
 ' '
 
-16:26:27 Build Finished (took 2s.990ms)
+00:38:42 Build Finished (took 4s.458ms)
 

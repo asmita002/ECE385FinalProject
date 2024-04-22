@@ -1,6 +1,6 @@
-16:26:10 **** Incremental Build of project mb_usb_hdmi_top ****
-buildplatform.bat 51301 mb_usb_hdmi_top no_domain_build 
-xsct% XSDB Server Channel: tcfchan#11
+00:38:20 **** Incremental Build of project mb_usb_hdmi_top ****
+buildplatform.bat 56541 mb_usb_hdmi_top no_domain_build 
+XSDB Server Channel: tcfchan#1
 C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 make --no-print-directory seq_libs
@@ -47,11 +47,11 @@ TRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tre
 
 "Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
 
-"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
-
 make -C microblaze_0/libsrc/tmrctr_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
 LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_
 COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
 
 make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
 PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
@@ -77,11 +77,11 @@ LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-di
 
 "Running Make libs in microblaze_0/libsrc/intc_v3_15/src"
 
-"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
-
 make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
 FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMP
 ILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
 
 make -C microblaze_0/libsrc/spi_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_FL
 AGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPIL
@@ -144,7 +144,7 @@ xuartlite_stats.o
 mb-ar: creating microblaze_0/lib/libxil.a
 'Finished building libraries'
 
-16:26:24 **** Incremental Build of configuration Debug for project celeste_fpga ****
+00:38:38 **** Incremental Build of configuration Debug for project celeste_fpga ****
 make all 
 'Building file: ../src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -235,6 +235,6 @@ mb-size celeste_fpga.elf  |tee "celeste_fpga.elf.size"
   24280	    488	   3672	  28440	   6f18	celeste_fpga.elf
 'Finished building: celeste_fpga.elf.size'
 ' '
-16:26:28 **** Incremental Build of configuration Debug for project celeste_fpga_system ****
+00:38:43 **** Incremental Build of configuration Debug for project celeste_fpga_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."

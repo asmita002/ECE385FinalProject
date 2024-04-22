@@ -28,3 +28,8 @@ platform config -updatehw {C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_fin
 platform generate -domains 
 platform config -updatehw {C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/mb_usb_hdmi_top.xsa}
 platform generate -domains 
+platform config -updatehw {C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/dasan/Desktop/ECE385FinalProject/ece_385_final_vivado/mb_usb_hdmi_top.xsa}
+platform generate -domains 

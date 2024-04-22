@@ -23,7 +23,7 @@ assign DistY = DrawY - CharY;
 
 // address into the rom = (x*xDim)/640 + ((y*yDim)/480) * xDim
 // this will stretch out the sprite across the entire screen
-assign rom_address = ((DistX * 32) / 640) + (((DistY * 32) / 480) * 32);
+assign rom_address = ((DistX * 32) / 640) + (((DistY) / 480) * 32);
 
 always_ff @ (posedge vga_clk) begin
 	red <= 4'h0;
